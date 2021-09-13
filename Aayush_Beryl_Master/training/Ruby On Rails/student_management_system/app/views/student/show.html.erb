@@ -1,0 +1,23 @@
+<button><a href='/student'><=Back</a></button>
+<h2>Student Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Contact No.</th>
+    <th>Enrolled Date </th>
+    <th>Course Name </th>
+  </tr>
+  <tr>
+  <% for i in @student.ids %>
+    <td><%= @student.find(i).name %></td>
+    <td><%= @student.find(i).age %></td>
+    <td><%= @student.find(i).email %></td>
+    <td><%= @student.find(i).contact_no %></td>
+    <td><%= @student.find(i).enrolled_date %></td>
+    <td><%= @student.find(i).course.name %></td>
+  </tr>
+  <%end%>
+</table>

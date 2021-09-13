@@ -1,0 +1,17 @@
+<button><a href='course'><=Back</a></button>
+<h2>Course Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fees</th>
+    <th>Duration</th>
+  </tr>
+  <tr>
+  <% for i in @course.ids%>
+    <td><%=@course.find(i).name%></td>
+    <td><%=@course.find(i).fees%></td>
+    <td><%=@course.find(i).duration%></td>
+  </tr>
+    <%end%>
+</table>
