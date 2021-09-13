@@ -1,0 +1,39 @@
+<h2>Student Form</h2>
+
+  <%= @student.errors.messages %>
+
+<%= form_for @student , url:student_path do |f| %>
+
+  
+  <%= f.label :name , "Name:" %>
+  <%= f.text_field :name %><br><br>
+
+
+  <%= f.label :age , "Age" %>
+  <%= f.number_field :age , in: 0..100 %><br>
+
+  
+  <%= f.label :email , "Email" %>
+  <%= f.email_field :email %><br>
+
+  
+  <%= f.label :contact_no , "Contact No." %>
+  <%= f.number_field :contact_no %><br>
+
+  <%= f.label :enrolled_date, "Enrolled Date:" %> <br>
+  <%= f.date_field :enrolled_date %><br><br>
+
+
+  <%= f.label :course_id, "Course Name" %>
+  <%= f.select :course_id, [["select"] , Course.order(:id).ids.map{|i| [Course.find(i).name , i]}].flatten(1) %><br>
+  <br>
+
+  <%= f.fields_for :guardian do |form| %>
+    <%= form.label :name, "Guardian Name:" %>
+    <%= form.text_field :name %>
+    <%= form.label :contact, "Guardian Contact:" %>
+    <%= form.number_field :contact %>
+  <% end %>
+    <%= f.submit "Submit" , id:'btn1' %>
+
+<% end %>

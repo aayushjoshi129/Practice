@@ -1,0 +1,21 @@
+<h2>Faculty Form</h2>
+
+ <%= @faculty.errors.messages %>
+
+<%= form_for @faculty , url:faculty_path do |f| %>
+
+  
+  <%= f.label :name , "Name:" %>
+  <%= f.text_field :name %><br><br>
+
+
+  <%= f.label :salary , "Salary" %>
+  <%= f.number_field :salary  %><br>
+
+  <%= f.label :course_id, "Course Name" %>
+  <%= f.select :course_id, [["select"] , Course.ids.map{|i| [Course.find(i).name,i]}].flatten(1) %><br>
+  <br>
+
+  <%= f.submit "Submit" , id:"btn5" %>
+
+<% end %>

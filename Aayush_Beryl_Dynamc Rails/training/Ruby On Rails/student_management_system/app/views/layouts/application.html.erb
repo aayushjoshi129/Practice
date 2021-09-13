@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudentManagementSystem</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+
+  </head>
+  <body>
+
+    <div id='navbar'>
+
+      <a href="/home">Home</a>
+      
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Student</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , student_show_path %>
+            <%= link_to "Create" , student_path%>
+          </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Faculty</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , faculty_show_path %>
+            <%= link_to "Create" , faculty_path%>
+          </div>
+      </div>
+      
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Guardian</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , guardian_show_path %>
+            <%= link_to "Create" , guardian_path%>
+          </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Course</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , course_show_path %>
+            <%= link_to "Create" , course_path%>
+          </div>
+      </div>
+      
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Feedback</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , feedback_show_path %>
+            <%= link_to "Create" , feedback_path%>
+          </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#"class="dropbtn">Certification</a>
+          <div class="dropdown-content">
+            <%= link_to "View" , certification_show_path %>
+            <%= link_to "Create" , certification_path%>
+          </div>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>

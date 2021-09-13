@@ -1,0 +1,26 @@
+<%# <button><a href='/home'><=Back</a></button> %>
+<%= link_to "Back", home_path %>
+<h2>Course Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+
+  <tr>
+    <th>Name</th>
+    <th>Fees</th>
+    <th>Duration</th>
+    <th>Modify</th>
+    <th>Delete</th>
+  </tr>
+  
+  <tr>
+  <% @courses.ids.each do |i|%>
+    <td><%=@courses.find(i).name%></td>
+    <td><%=@courses.find(i).fees%></td>
+    <td><%=@courses.find(i).duration%></td>
+    <td><a href="/course/<%= i %>/edit">Edit</a></td>
+    <td><a data-confirm="Sure to delete data of <%= @courses.find(i).name %>?" data-method="delete" href="/course/<%= i%>">Delete</a></td>
+  </tr>
+  
+    <%end%>
+    
+</table>
