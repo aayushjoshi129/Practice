@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from "./App"
-import "./index.css"
+import MainCalculator from './Thapa_Technical_Tasks/Calculator/MainCalculator'
 
-ReactDOM.render( <App/>, document.getElementById("root")) // Used App Component
+ReactDOM.render( <MainCalculator/>, document.getElementById("root")) // Used App Component
