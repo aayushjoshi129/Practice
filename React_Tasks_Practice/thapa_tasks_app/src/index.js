@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MainCalculator from './Thapa_Technical_Tasks/Calculator/MainCalculator'
+import Table from './Thapa_Technical_Tasks/Netflix/Table'
 
-ReactDOM.render( <MainCalculator/>, document.getElementById("root")) // Used App Component
+ReactDOM.render( <Table/>, document.getElementById("root")) // Used App Component
