@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import UseStateHook from './Thapa_Technical_Tasks/React_Hooks/UseStateHook'
+import GetTime from './Thapa_Technical_Tasks/GetTime/GetTime'
 
-ReactDOM.render(<UseStateHook/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<GetTime/>, document.getElementById("root")) // Used App Component
