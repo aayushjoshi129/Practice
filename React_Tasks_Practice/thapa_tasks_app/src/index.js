@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SlotFormat from './Thapa_Technical_Tasks/SlotGame/SlotFormat'
+import UseStateHook from './Thapa_Technical_Tasks/React_Hooks/UseStateHook'
 
-ReactDOM.render(<SlotFormat/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<UseStateHook/>, document.getElementById("root")) // Used App Component
