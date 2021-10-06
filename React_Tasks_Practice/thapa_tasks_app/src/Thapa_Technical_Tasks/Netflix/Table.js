@@ -1,17 +1,13 @@
 import React from 'react'
 import Users from './Users'
-
-const style = {
-  textAlign: "center"
-}
+import './table.css'
 
 function Table() {
-  let i = ""
   return (
 
     <>
-      <h1 style={style}>Welcome To Fetched Data Using Array Collection In React JS</h1>
-      <table style={{ width: "100%" }}>
+      <h1 className="heading1">Welcome To Fetched Data Using Array Collection In React JS</h1>
+      <table>
         <tr>
           <th>Name</th>
           <th>Rating</th>
@@ -20,10 +16,10 @@ function Table() {
         </tr>
         {Users.map(data => <>
           <tr>
-            <td style={style}>{data.name}</td>
-            <td style={style}>{data.rating}</td>
-            <td style={style}>{data.alternative_name}</td>
-            <td style={style}>{data.objectID}</td>
+            <td>{data.name}</td>
+            <td>{data.rating}</td>
+            <td>{data.alternative_name}</td>
+            <td>{data.objectID}</td>
           </tr>
         </>)}
       </table>

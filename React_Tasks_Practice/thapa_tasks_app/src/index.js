@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Table from './Thapa_Technical_Tasks/Netflix/Table'
+import SlotFormat from './Thapa_Technical_Tasks/SlotGame/SlotFormat'
 
-ReactDOM.render( <Table/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<SlotFormat/>, document.getElementById("root")) // Used App Component
