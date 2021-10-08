@@ -1,0 +1,443 @@
+					RUBY PROGRAMMING LANGUAGE
+
+** Ruby is a pure object-oriented and server-side scripting and programming language. It was created in 1993 by Yukihiro Matsumoto of Japan.
+
+** Ruby can be embedded into html and is much scalable.
+
+** Ruby can be used for developing internet and intranet applications.It can easily be connected to DB2, MySQL, Oracle, and Sybase.
+
+** The 4 pillars of OOP's are --> Data Encapsulation , Data Abstraction , Polymorphism , Inheritance
+
+** CLASS is a collection of data members and member functions. It's like a blueprint for objects (real life entity).
+** OBJECT is an instance of a class.
+   cust1 = Customer. new <-- Creating an object from Customer class.
+
+** VARIABLES in Ruby 
+a) Local = defined inside a method. not accessible outside the method. begin with a lowercase or _ .
+b) Instance = available across the methods for any instance or object. They are preceded by the at sign (@) followed by the variable name.
+c) Class = available across different objects.They are preceded by the sign (@@) and are followed by the variable name.
+d) Global = accessible by all classes. They are always preceded by the dollar sign ($).
+e) Constants = It is defined by Capital Letters. ex=> PI=3.14 , AGE=18
+
+** CONSTANTS in Ruby = Constants begin with an uppercase letter. ex=Car,River etc.
+
+** PSEUDO-VARIABLES IN Ruby = They are special variables that have the appearance of local variables but behave like constants. You cannot assign any value to these variables.
+
+self − The receiver object of the current method.
+
+true − Value representing true.
+
+false − Value representing false.
+
+nil − Value representing undefined.
+
+__FILE__ − The name of the current source file.
+
+__LINE__ − The current line number in the source file.
+
+
+** Remember in Ruby, classes and methods may be considered constants too.
+
+
+The freeze method in Ruby is used to ensure that an object cannot be modified. This method is a great way to create immutable objects.
+
+
+				LOOPS AND CONDITIONAL STATEMENTS IN RUBY
+
+1) IF-ELSE LOOPS IN RUBY
+
+if conditional [then]
+   code...
+[elsif conditional [then]
+   code...]...
+[else
+   code...]
+end
+
+2) UNLESS STATEMENTS IN RUBY
+ 
+unless conditional [then]
+   code
+[else
+   code ]
+end
+Executes code if conditional is false. If the conditional is true, code specified in the else clause is executed.
+
+3) CASE STATEMENTS IN RUBY
+
+ case expression
+[when expression [, expression ...] [then]
+   code ]...
+[else
+   code ]
+end
+
+3.0.1 :040 > case age
+3.0.1 :041 >   when 0 .. 2
+3.0.1 :042 >    puts "baby"
+3.0.1 :043 > when 3 .. 6
+3.0.1 :044 >    puts "little child"
+3.0.1 :045 > when 7 .. 12
+3.0.1 :046 >    puts "child"
+3.0.1 :047 > when 13 ... 18
+3.0.1 :048 >    puts "youth"
+3.0.1 :049 > else
+3.0.1 :050 >    puts "adult"
+3.0.1 :051 > end
+
+
+4) RETRY RUBY
+
+begin
+   do_something # exception raised
+rescue
+   # handles error
+   retry  # restart from beginning
+end
+
+5) WHILE LOOP IN RUBY
+
+while conditional [do]
+   code
+end
+
+
+6) DO-WHILE LOOP IN RUBY
+
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1
+end while $i < $num
+
+
+7) FOR LOOP IN RUBY
+
+for variable [, variable ...] in expression [do]
+   code
+end
+
+
+
+
+				METHODS OR FUNCTIONS IN RUBY
+
+
+** Each method in a class starts with the keyword def followed by the method name.
+** The method name always preferred in lowercase letters. You end a method in Ruby by using the keyword end.
+
+def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
+   expr..
+end
+
+
+
+class Customer
+   @@no_of_customers = 0
+   def initialize(id, name, addr)
+      @cust_id = id
+      @cust_name = name
+      @cust_addr = addr
+   end
+end
+
+cust1 = Customer. new(1,'Aditya','Faridabad')	<-- Creating objects of class Customer
+cust2 = Customer. new(2,'Aqib','Badarpur')	<-- Creating objects of class Customer
+
+
+
+class Sample
+   def hello
+      puts "Hello Ruby!"
+   end
+end
+
+# Now using above class to create objects
+object = Sample. new	<-- Creation of object using class Sample
+object.hello		<-- Accessing method in class Sample
+
+
+UNDEF STATEMENT IN RUBY
+
+** undef cancels the method definition. An undef cannot appear in the method body.
+
+
+BLOCKS IN RUBY 
+
+def test
+   puts "You are in the method"
+   yield					------> Yield statement is used to call a block
+   puts "You are again back to the method"
+   yield
+end
+test {puts "You are in the block"}		------> This is a Block
+
+
+def test
+   yield 5					------> Given one argument in block
+   puts "You are in the method test"
+   yield 100
+end
+test {|i| puts "You are in the block #{i}"}	------> to access the passed parameter in block use this syntax
+
+
+
+BEGIN AND END BLOCKS IN RUBY 
+
+** A program may include multiple BEGIN and END blocks. BEGIN blocks are executed in the order they are encountered. END blocks are executed in reverse order.
+
+BEGIN { 
+   # BEGIN block code 
+   puts "BEGIN code block"
+} 
+
+END { 						----> End block will be executed at the end of the program
+   # END block code 
+   puts "END code block"
+}
+   # MAIN block code 
+puts "MAIN code block"
+
+output :  
+BEGIN code block
+MAIN code block
+END code block
+
+
+					MODULES IN RUBY
+
+** Modules are a way of grouping together methods, classes, and constants. Modules give you two major benefits.
+
+module Trig
+   PI = 3.141592654
+   def Trig.sin(x)
+   # ..
+   end
+   def Trig.cos(x)
+   # ..
+   end
+end
+
+
+** If a third program wants to use any defined module, it can simply load the module files using the Ruby require statement.
+
+require 'trig.rb'
+require 'moral'
+
+y = Trig.sin(Trig::PI/4)
+wrongdoing = Moral.sin(Moral::VERY_BAD)
+
+
+** Ruby does not support multiple inheritance directly but Ruby Modules have another wonderful use. At a stroke, they pretty much eliminate the need for multiple inheritance, providing a facility called a mixin.
+
+** MIXINS IN RUBY : Mixins give you a wonderfully controlled way of adding functionality to classes. However, their true power comes out when the code in the mixin starts to interact with code in the class that uses it.
+
+module A
+   def a1
+   end
+   def a2
+   end
+end
+module B
+   def b1
+   end
+   def b2
+   end
+end
+
+class Sample
+include A			------> Including Module A so that it can inherit all its properties
+include B			------> Including Module B so that it can inherit all its properties
+   def s1			------> Defining a method in class Sample
+   end
+end
+
+samp = Sample.new
+samp.a1				------> Accessing method a1 of module A
+samp.a2				------> Accessing method a2 of module A
+samp.b1				------> Accessing method b1 of module B
+samp.b2				------> Accessing method b2 of module B
+samp.s1				------> Accessing method s1 of class Sample
+
+
+
+				IMPORTANT DATA TYPES IN RUBY
+
+
+1)STRINGS
+
+A String object in Ruby holds and manipulates an arbitrary sequence of one or more bytes, typically representing characters that represent human language.
+
+3.0.1 :054 > puts 'This is \nNew Book'
+This is \nNew Book
+ => nil 
+
+3.0.1 :055 > puts "This is \nNew Book"
+This is 
+New Book
+ => nil 
+
+
+** TO CHANGE ENCODING OF CHARACTER SET 
+
+1	$KCODE = 'a'
+
+ASCII (same as none). This is the default.
+
+2	$KCODE = 'u'
+
+EUC.
+
+3	$KCODE = 'n'Ruby arrays are ordered, integer-indexed collections of any object. Each element in an array is associated with and referred to by an index.
+
+None (same as ASCII).
+
+4	$KCODE = 'u'
+	
+UTF-8.
+
+BUILT-IN FUNCTION TO CREATE A STRING 
+
+3.0.1 :057 > myStr = String.new("THIS IS TEST")
+ => "THIS IS TEST" 
+3.0.1 :058 > foo = myStr.downcase
+ => "this is test" 
+3.0.1 :059 > 
+3.0.1 :060 > puts "#{foo}"
+this is test
+ => nil 
+
+
+
+
+2) ARRAYS IN RUBY
+
+Ruby arrays are ordered, integer-indexed collections of any object. Each element in an array is associated with and referred to by an index.
+
+Creating Array 
+
+names = Array.new
+
+nums = Array.new(10) { |e| e = e * 2 }
+puts "#{nums}"
+
+
+nums = Array[1, 2, 3, 4,5]
+
+nums = Array.[](1, 2, 3, 4,5)
+
+
+3) HASHES IN RUBY 
+
+A Hash is a collection of key-value pairs like this: "employee" = > "salary". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.
+
+
+
+Creating Hashes
+
+months = Hash.new
+
+months = Hash.new("month")
+
+months = Hash.new "month"
+
+H = Hash["a" => 100, "b" => 200]
+
+puts "#{H['a']}"			---> 100
+puts "#{H['b']}"			---> 200
+
+
+3.0.1 :052 > months = {"1" => "January", "2" => "February"}
+ => {"1"=>"January", "2"=>"February"} 
+3.0.1 :053 > months.keys
+ => ["1", "2"] 
+3.0.1 :054 > months.values
+ => ["January", "February"] 
+
+
+
+
+				FILE HANDLING(I/O) IN RUBY
+
+
+PUTC STATEMENT - Unlike the puts statement, which outputs the entire string onto the screen, the putc statement can be used to output one character at a time.
+
+str = "Hello Ruby!"
+putc str
+H
+
+CREATING A NEW FILE 
+
+aFile = File.new("filename", "mode")
+   # ... process the file
+aFile.close
+
+3.0.1 :154 > Time.new.strftime("%X")
+ => "17:18:32"
+You can use File.open method to create a new file object and assign that file object to a file. However, there is one difference in between File.open and File.new methods. The difference is that the File.open method can be associated with a block, whereas you cannot do the same using the File.new method.
+
+File.open("filename", "mode") do |aFile|
+   # ... process the file
+end
+
+
+MODES
+
+1) r = read-only mode. file pointer is at beginning of file.
+2) r+ = read-write mode. file pointer will be at the beginning of the file.
+3) w = write-only mode. overwrites file if any same file exists.
+4) w+ = read-write mode. overwrites file if any same file exists.
+5) a = write-only mode. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+6) a+ = Read and write mode. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+
+	The sysread Method
+
+You can use the method sysread to read the contents of a file. You can open the file in any of the modes when using the method sysread
+
+	The syswrite Method
+
+You can use the method syswrite to write the contents into a file. You need to open the file in write mode when using the method syswrite.
+
+
+
+puts File.readable?("discount.rb")				-----> True
+puts File.writable?("discount.rb")				-----> True
+puts File.executable?("discount.rb")				-----> False
+puts File.zero?("discount.rb")					-----> False
+puts File.size?("discount.rb")					-----> 288
+puts File::ftype("discount.rb")					-----> file
+puts File::ctime("discount.rb")					-----> 2021-06-17 15:00:04 +0530
+puts File::mtime("discount.rb")					-----> 2021-06-17 15:00:04 +0530
+puts File::atime("discount.rb")					-----> 2021-06-21 15:12:27 +0530
+
+
+
+			EXCEPTION HANDLING IN RUBY
+
+Everything from begin to rescue is protected. If an exception occurs during the execution of this block of code, control is passed to the block between rescue and end.
+
+begin  
+# -  
+rescue OneTypeOfException  
+# -  
+rescue AnotherTypeOfException  
+# -  
+else  
+# Other exceptions
+ensure
+# Always will be executed
+end
+
+
+
+The following is the flow of the process −
+
+An exception occurred at open.
+Went to rescue. fname was re-assigned.
+By retry went to the beginning of the begin.
+This time file opens successfully.
+Continued the essential process.
+
+
