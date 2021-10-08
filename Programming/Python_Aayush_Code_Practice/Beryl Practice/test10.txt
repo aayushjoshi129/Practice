@@ -1,0 +1,5 @@
+employee table (id,name,salary,deptid)
+dept table (id,name)
+select avg(salary) from employee;
+select name from employee natural join dept ;
+select id select * from employee where deptid=(select id from dept where name='accounts');
