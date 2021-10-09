@@ -1,0 +1,17 @@
+{
+    "bkl":[{
+    "fruit": "Apple",
+    "size": "Large",
+    "color": "Red"
+},
+{
+    "fruit": "Orange",
+    "size": "Medium",
+    "color": "Orange"
+},
+{
+    "fruit": "Banana",
+    "size": "Long",
+    "color": "Yellow"
+}]
+}

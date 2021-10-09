@@ -1,0 +1,19 @@
+.container{
+  background-color: rgb(176, 176, 233);
+  padding:20px;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+
+.form-group{
+  padding: 20px;
+}
+
+.note{
+  background-color: rgb(129, 129, 216);
+  border-radius: 10px;
+}
+
+body{
+  background-color:rgb(199, 199, 235);
+}

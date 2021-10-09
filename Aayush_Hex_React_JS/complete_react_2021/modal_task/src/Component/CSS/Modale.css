@@ -1,0 +1,39 @@
+#clci{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+@media (min-width: 576px)
+{
+  #myid{
+    max-width: 1000px;
+  }
+  #label09 , #label011 {
+    padding-left: 60px;
+  }
+}
+.modal-dialog {
+  width: 100%;
+  height:auto;
+}
+.modal-content{
+  display: block;
+  width: 900px;
+  height: auto;
+  border-radius: 20px;
+}
+
+#form1{
+  padding: 15px 10px;
+}
+#form1 label{
+  margin: 0px 20px;
+}
+#form1 input{
+  margin:0px 20px;
+}
+
+#modal-footer{
+  display: block;
+}

@@ -1,0 +1,110 @@
+                    REACT TRAINING AT HEX BUSINESS INNOVATIONS
+
+1) Installation of nodejs (for windows 7) -> https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi
+
+2) Installation of REACT 
+
+a) first check node version using node -v and npm version using npm -v
+b) then create folder Codefactory then in it create folder react-windows and jump into that folder
+c) run npm init then it will create package.json file
+d) then run -> npm install --save react and after that run -> npm install --save react-dom
+
+3) Now to make the REACT app
+
+a) come back in Codefactory folder then  create a folder - mkdir react-cli
+b) create an app using this command -> npx create-react-app my-first-app (this will create an app with name my-first-app)
+c) then go to your app folder -> cd my-fast-app then run npm start and then run localhost:3000
+
+Topics to cover today
+Props , Component did-mount , Component did-update types , Redux in React , Material Core Library.
+mapping , componentDidMount
+
+
+Props (properties) (Immutable) -> React allows us to pass information to a Component using something called props (stands for properties). Props are basically kind of global variable or object.
+
+Components -> Components are like functions that return HTML elements.Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function.Components come in two types, Class components and Function components.
+a) Class Component -> When creating a React component, the component's name must start with an upper case letter.
+The component has to include the extends React.Component statement, this statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+The component also requires a render() method, this method returns HTML.
+
+b) Function Component -> A Function component also returns HTML, and behaves pretty much the same way as a Class component, but Class components have some additions.
+
+c) Constructor Component -> If there is a constructor() function in your component, this function will be called when the component gets initiated.
+
+d) Props -> Props are like function arguments, and you send them into the component as attributes.
+
+e) Components In Components -> We can refer to components inside other components.
+
+f) Components In Files -> React is all about re-using code, and it can be smart to insert some of your components in separate files.
+
+To do that, create a new file with a .js file extension and put the code inside it:
+
+Note that the file must start by importing React (as before), and it has to end with the statement export default Car;.
+
+React State -> React components has a built-in state object.
+The state object is where you store property values that belongs to the component.
+When the state object changes, the component re-renders.
+To change a value in the state object, use the this.setState() method.
+Always use the setState() method to change the state object, it will ensure that the component knows its been updated and calls the render() method (and all the other lifecycle methods).
+
+
+
+Material-UI-Core -> a) Installation = npm i @material-ui/core
+MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.
+
+REACT LIFECYCLE 
+
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+The three phases are: Mounting, Updating, and Unmounting.
+
+a) Mounting -> Mounting means putting elements into the DOM.
+
+
+React has four built-in methods that gets called, in this order, when mounting a component:
+a1) constructor()  =  The constructor() method is called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values.
+The constructor() method is called with the props, as arguments, and you should always start by calling the super(props) before anything else, this will initiate the parent's constructor method and allows the component to inherit methods from its parent (React.Component).
+
+a2) getDerivedStateFromProps()  =  This method is called right before rendering the element(s) in the DOM.
+This is the natural place to set the state object based on the initial props.
+It takes state as an argument, and returns an object with changes to the state.
+
+a3) render()  =  The render() method is required, and is the method that actually outputs the HTML to the DOM.
+ReactDOM.render(<Header />, document.getElementById('root'));
+
+a4) componentDidMount()  =  The componentDidMount() method is called after the component is rendered.
+This is where you run statements that requires that the component is already placed in the DOM.
+
+
+b) Updating -> A component is updated whenever there is a change in the component's state or props.
+React has five built-in methods that gets called, in this order, when a component is updated:
+
+
+b1) getDerivedStateFromProps()  =  Also at updates the getDerivedStateFromProps method is called. This is the first method that is called when a component gets updated.
+
+b2) shouldComponentUpdate()  =  In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not.
+The default value is true.
+  shouldComponentUpdate() {
+    return false;
+  }
+
+b3) render()  =  The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes.
+
+b4) getSnapshotBeforeUpdate()  =  In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update.
+If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error.
+
+b5) componentDidUpdate()  =  The componentDidUpdate method is called after the component is updated in the DOM.
+
+
+c) Unmounting -> The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+React has only one built-in method that gets called when a component is unmounted:
+
+
+c1) componentWillUnmount()  =  The componentWillUnmount method is called when the component is about to be removed from the DOM.
+
+REACT EVENTS
+
+a) onClick={shoot}
+
+b) Bind this  =  this keyword should represent the component that owns the method.
+
+                  AXIOS and FETCH IN REACT
