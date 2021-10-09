@@ -1,0 +1,17 @@
+<button><a href='certification'><=Back</a></button>
+<h2>Certification Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fees</th>
+    <th>Duration</th>
+  </tr>
+  <tr>
+  <% for i in @certification.ids%>
+    <td><%=@certification.find(i).name%></td>
+    <td><%=@certification.find(i).fees%></td>
+    <td><%=@certification.find(i).duration%></td>
+  </tr>
+    <%end%>
+</table>

@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body{
+    background:#ededee;
+    font-style: oblique;
+  }
+
+  #navbar{
+    margin-top: -8px;
+    height:35px;
+    width:100% ;
+    background-color: rgb(88, 79, 136);
+    border-radius: 6px;
+  }
+  
+  #navbar a{
+    
+    color: white;
+    margin:42px ; 
+    text-decoration:none ; 
+    font-size:26px;
+  }
+
+  #navbar a:hover
+  {
+    color:rgb(213, 213, 228);
+  }
+
+  a
+  {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover
+  {
+    color:white;
+  }
+  button:hover
+  {
+    
+    background:rgb(88, 79, 136);
+    border-radius: 10px;
+    color: white;
+  }
+
+ table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+
+ th, td {
+   padding: 15px;
+   text-align: center;
+ }
+
+ table{
+   margin-top: 50px;
+   width:100%;
+   box-shadow: 5px 5px rgb(88, 79, 136);
+   
+ }
+
+ form
+{
+  width: 175px; 
+  margin: 0 auto;
+  /* size:20px; */
+}
+
+h2
+{
+  text-align:center;
+  font-size: 40px;
+}
+
+table tr:nth-child(even)
+{
+  background-color: #c1c1e6;
+}
+
+table tr:first-child
+{
+  background-color: rgb(88, 79, 136);
+  color: rgb(242, 247, 251);
+}
+input[type="submit"]:hover
+{
+  background-color: rgb(88, 79, 136);
+  color: white;
+  border-radius: 10px;
+}
+input[type="reset"]:hover
+{
+  background-color: rgb(88, 79, 136);
+  color: white;
+  border-radius: 10px;
+}
+
+input[type="submit"]{
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+input[type="reset"]{
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+label{
+  font-size: 20px;
+}
+
+button
+{
+  font-size: 15px;
+  border-radius: 10px;
+}

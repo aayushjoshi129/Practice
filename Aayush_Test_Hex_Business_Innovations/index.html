@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Modal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <button class="btn__purple" id="trigger">Open Modal</button>
+
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="close">&times;</button>
+            <h2>Login now</h2>
+            <form name="RegForm" id="myForm" onsubmit="return validate()" >
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="Aayush" required disabled><br><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
+                <label for="lname">Address:</label><br>
+                <input type="textarea" id="address" name="address" required><br><br>
+                <input type="submit" class="btn__purple" value="Submit">
+              </form>              
+            <div class="action">
+                <button class="btn__purple" onclick="showContent()">Submit</button>
+            </div>
+            <div id="demo"></div>
+            
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

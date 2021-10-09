@@ -1,0 +1,20 @@
+<h2>Guardian Edit Form</h2>
+
+ <%= @guardian.errors.messages %>
+
+<%= form_for @guardian  do |f| %>
+
+  
+  <%= f.label :name , "Name:" %>
+  <%= f.text_field :name %><br><br>
+  
+  <%= f.label :contact , "Contact No." %>
+  <%= f.number_field :contact , is: 10 %><br>
+
+
+  <%= f.label :student_id, "Student Name" %>
+  <%= f.select :student_id, [["select"] , Student.order(:id).ids.map{|i| [Student.find(i).name,i]}].flatten(1) %><br><br>
+
+    <%= f.submit "Update"%>
+
+<% end %>

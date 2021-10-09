@@ -1,0 +1,51 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<%= form_with(model: pilot, local: true) do |form| %>
+  <% if pilot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pilot.errors.count, "error") %> prohibited this pilot from being saved:</h2>
+
+      <ul>
+        <% pilot.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_area :email %>
+  </div>
+
+<div id="my-dropzone" class="dropzone">
+  <div class="dz-message needsclick">
+    <h3>Drop Files Here</h3> <strong>Click To Upload</strong>
+  </div>
+  <div class="fallback">
+    <%= form.file_field :pics %>
+    <%= form.submit "upload files"%>
+  </div>
+</div>
+
+
+<script>
+
+
+</script>
+ 
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

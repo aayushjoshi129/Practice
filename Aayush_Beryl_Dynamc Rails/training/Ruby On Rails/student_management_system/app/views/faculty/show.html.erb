@@ -1,0 +1,26 @@
+<%# <button><a href='/home'><=Back</a></button> %>
+<%= link_to "Back", home_path %>
+<h2>Faculty Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+
+  <tr>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Course Id </th>
+    <th>Modify</th>
+    <th>Delete</th>
+  </tr>
+  
+  <% @faculties.order(:id).each do |faculty| %>
+  <tr>
+    <td><%= faculty.name %></td>
+    <td><%= faculty.salary %></td>
+    <td><%= faculty.course_id %></td>
+     <td><%= link_to "edit" , faculty_path(faculty.id) , method: :put %></td>
+    <td><%= link_to "delete" , faculty_path(faculty.id) , method: :delete , data: {confirm: 'Are You Sure?'}%></td>
+  </tr>
+  
+  <%end%>
+  
+</table>

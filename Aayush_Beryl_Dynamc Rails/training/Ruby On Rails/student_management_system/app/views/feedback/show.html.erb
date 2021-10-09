@@ -1,0 +1,26 @@
+<%# <button><a href='/home'><=Back</a></button> %>
+<%= link_to "Back", home_path %>
+<h2>Feedback Details</h2>
+<button onclick="print()">Print This Page</button>
+<table>
+
+  <tr>
+    <th>Comment Id</th>
+    <th>Comment By</th>
+    <th>Content</th>
+    <th>Modify</th>
+    <th>Delete</th>
+  </tr>
+  
+  <% @feedbacks.order(:id).each do |feedback| %>
+  <tr>
+    <td><%=feedback.comments_id%></td>
+    <td><%=feedback.comments_type%></td>
+    <td><%=feedback.content%></td>
+    <td><%= link_to "edit" , feedback_path(feedback.id) , method: :put %></td>
+    <td><%= link_to "delete" , feedback_path(feedback.id) , method: :delete , data: {confirm: 'Are You Sure?'}%></td>
+  </tr>
+  
+    <%end%>
+    
+</table>

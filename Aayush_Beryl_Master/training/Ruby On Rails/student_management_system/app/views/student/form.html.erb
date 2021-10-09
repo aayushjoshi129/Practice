@@ -1,0 +1,58 @@
+
+<h2>Student Form</h2>
+
+<form name="student_form" onsubmit="return validateForm()" method="post">
+    <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" placeholder="Enter Your Name"><br>
+    <label for="age">Age</label><br>
+  <input type="number" id="age" name="age" placeholder="Enter Your Age"><br>
+    <label for="email">Email</label><br>
+  <input type="email" id="email" name="email" placeholder="Enter Your Email"><br>
+    <label for="contact">Contact No.</label><br>
+  <input type="number" id="contact" name="contact" placeholder="Enter Your Contact"><br><br>
+      <label for="course">Course Id:</label>
+      <select id="course" name="course">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      </select><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset"><br><br>
+      <button><a href='/show_student'>Show Details</a></button>
+</form>
+
+<%= javascript_pack_tag 'student'%>
+
+<script>
+
+function validateForm() {
+  let a = document.forms["student_form"]["name"].value;
+  let b = document.forms["student_form"]["age"].value;
+  let c = document.forms["student_form"]["email"].value;
+  let d = document.forms["student_form"]["contact"].value;
+  let e = document.forms["student_form"]["course"].value;
+  if (a == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  else if (b==""){
+    alert ("Age must be filled out");
+    return false;
+  }
+  else if (c==""){
+    alert ("Email must be filled out");
+    return false;
+  }
+  else if (d==""){
+    alert ("Contact must be filled out");
+    return false;
+  }
+  else if (e==""){
+    alert ("Course must be Selected");
+    return false;
+  }
+}
+</script>
