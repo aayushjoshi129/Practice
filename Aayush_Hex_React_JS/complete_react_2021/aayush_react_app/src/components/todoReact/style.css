@@ -13,6 +13,7 @@ html {
 
 .main-div {
   min-height: 100vh;
+  width: 100vw;
   background: #060822;
   display: flex;
   justify-content: center;
