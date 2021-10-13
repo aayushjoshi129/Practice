@@ -11,7 +11,7 @@ const DigitalClock = () => {
     setCtime(time)
   }
 
-  setInterval(NewTime,1000);   // sets value after every partiular interval (takes callback function and interval as parameters)
+  setInterval(NewTime,1000);   // sets value after every particular interval (takes callback function and interval as parameters)
 
   return (
     <>

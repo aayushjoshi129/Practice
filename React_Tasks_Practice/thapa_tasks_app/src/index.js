@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import DigitalClock from './Thapa_Technical_Tasks/DigitalClock/DigitalClock'
+import Events from './Thapa_Technical_Tasks/Events/Events'
 
-ReactDOM.render(<DigitalClock/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<Events/>, document.getElementById("root")) // Used App Component
