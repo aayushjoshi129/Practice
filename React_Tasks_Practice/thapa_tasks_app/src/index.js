@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Events from './Thapa_Technical_Tasks/Events/Events'
+import ReactFormUsingStates from './Thapa_Technical_Tasks/React_Forms/ReactFormUsingStates'
 
-ReactDOM.render(<Events/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<ReactFormUsingStates/>, document.getElementById("root")) // Used App Component
