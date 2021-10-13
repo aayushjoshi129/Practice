@@ -1,1 +1,4 @@
 *.log
+*.gitignore
+*.vscode
+*node_modules
