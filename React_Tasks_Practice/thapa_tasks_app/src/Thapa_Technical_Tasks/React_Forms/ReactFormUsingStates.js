@@ -8,27 +8,16 @@ const ReactFormUsingStates = () => {
   });
 
   const changeName = (e) => {
-    const value = e.target.value;
-    const name = e.target.name;
+    // const value = e.target.value;
+    // const name = e.target.name;
+
+    const { value, name } = e.target;
 
     setName((prevValue) => {
-      if (name === "fname") {
-        return {
-          fname: value,
-          lname: prevValue.lname,
-        };
-      } else if (name === "lname") {
-        return {
-          fname: prevValue.fname,
-          lname: value,
-        };
-      } else if (name === "email") {
-        return {
-          fname: prevValue.fname,
-          lname: prevValue.lname,
-          email: value,
-        };
-      }
+      return {
+        ...prevValue, // Usage of Spread Operator containing objects all elements
+        [name]: value, // It is Checking that name of the previous attribute if matches with the input field names then it will set it's value to value which is e.target.value
+      };
     });
   };
 
