@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ReactForm from './Thapa_Technical_Tasks/React_Forms/ReactForm'
+import ReactForm2 from './Thapa_Technical_Tasks/React_Forms/ReactForm2'
 
-ReactDOM.render(<ReactForm/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<ReactForm2/>, document.getElementById("root")) // Used App Component

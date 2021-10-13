@@ -8,7 +8,8 @@ const changeName = (e) => {
   setName(e.target.value)
 }
 
-const onSubmit = () => {
+const onSubmit = (e) => {
+  e.preventDefault();   // This will prevent default nature of form tag submit 
   setFullName(name)
 }
 
@@ -34,10 +35,11 @@ const style1 = {
 return(
   <>
 <div style={style}>
-
-<h1 style={{marginLeft:'44%',marginTop:'20%'}}>Hello {fullName}</h1>
+  <form onSubmit={onSubmit}>
+  <h1 style={{marginLeft:'44%',marginTop:'20%'}}>Hello {fullName}</h1>
 <input type="text" onChange={changeName} style={style1} />
-<button type='button' onClick={onSubmit}>Submit</button>
+<button type='submit'>Submit</button>
+  </form>
 </div>  
   </>
 )
