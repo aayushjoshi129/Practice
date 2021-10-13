@@ -11,7 +11,7 @@ const ReactFormUsingStates = () => {
     // const value = e.target.value;
     // const name = e.target.name;
 
-    const { value, name } = e.target;
+    const { value, name } = e.target;   // object Destructuring
 
     setName((prevValue) => {
       return {
