@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Young LLC || Form</title>
+    <link rel="stylesheet" href="styleform.css">
+</head>
+<body>
+    <div class="container">
+
+        <form action="noaction.php" id="form1">
+        <h1>Choose Class Type</h1><br>   
+        <p>Make a selection of the kind of classes you are looking for Each mode of learning is unique and is imparted by certified coders from the industry.</p>  
+        <br>
+        <label for='cars'><h3>What Mode of Learning Suits You : </h3></label>
+
+        <select name="cars" id="cars">
+            <option value="Choose One">Choose One</option>
+        <option value="1-on-1 (Private)">1-on-1 (Private)</option>
+        <option value="Small Group Classes (Collaborative)">Small Group Classes (Collaborative)</option>
+    
+        </select><br><br>
+
+        <label for='Coding'><h3>Coding Experience : </h3></label>
+
+        <select name="experience" id="experience">
+            <option value="None">None</option>
+            <option value="1 To 6 Months">1 To 6 Months</option>
+            <option value="Less Than 1 Year">Less Than 1 Year</option>
+            <option value="More Than 1 Year">More Than 1 Year</option>
+        </select><br><br>
+
+        <label for='Trainer'><h3>Need Multilinguial Trainer :</h3></label>
+
+        <select name="experience" id="experience">
+
+            <option value="Choose One">Choose One</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>            
+
+        </select>
+
+        <div class="btn-box">
+            <button type="button" id="next1">Next</button>
+        </div>
+
+        </form>
+
+        <form action="noaction.php" id="form2">
+            <h1>Choose Class Schedule</h1> 
+            <p>Make a selection of the kind of classes you are looking for Each mode of learning is unique and is imparted by certified coders from the industry.</p>  
+            <br>
+            <label for='cars'><h3>How Many Sessions Do You Want to Take per Week : </h3></label>
+    
+            <select name="cars" id="cars">
+                <option value="Choose One">Choose One</option>
+            <option value="One / Week">One / Week</option>
+            <option value="Two / Week">Two / Week</option>
+            <option value="Three / Week">Three / Week</option>
+            <option value="Four / Week">Four / Week</option>
+            <option value="Five / Week">Five / Week</option>
+        
+            </select><br><br>
+    
+            <label for='Coding'><h3>What Is Your Time Zone : </h3></label>
+    
+            <select name="experience" id="experience">
+                <option value="None">None</option>
+                <option value="india">India</option>
+                <option value="America">America</option>
+                <option value="Dhaka">Dhaka</option>
+            </select><br><br>
+
+            <label for='Coding'><h3>What Is Your Preffered Days and Time For Class : </h3></label>
+    
+            <input type="checkbox" id="Monday" name="Monday" value="Monday">
+            <label for="Monday">Monday</label><br>
+            <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday">
+            <label for="Tuesday">Tuesday</label><br>
+            <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday">
+            <label for="Wednesday">Wednesday</label><br>
+            <input type="checkbox" id="Thursday" name="Thursday" value="Thursday">
+            <label for="Thursday">Thursday</label><br>
+            <input type="checkbox" id="Friday" name="Friday" value="Friday">
+            <label for="Friday">Friday</label><br>
+
+            <label for="text">Any Additional Feedback : </label>
+            <input type="text" name="Feedback" id="Feedback">
+
+            
+
+            <div class="btn-box">
+                <button type="button" id="previous1">Previous</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+    
+            </form>
+
+            <form action="noaction.php" id="form3">
+                <h1>Student Information</h1><br>   
+
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="School Name" required>
+                <input type="number" placeholder="Student Grade : " required>
+                <input type="text" placeholder="Student Gender : " required>
+                <input type="text" placeholder="Paremt/Guardian First Name" required>
+                <input type="text" placeholder="Paremt/Guardian Last Name" required>
+                <input type="number" placeholder="Best CallBack Number" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Where do You Hear About Us ?" required>
+    
+                <div class="btn-box">
+                    <button type="button" id="previous2">Previous</button>
+                    <button type="button">Submit</button>
+                </div>
+        
+                </form>
+
+                <div class="step-row">
+                    <div id="progress"></div>
+                    <div class="step-col"><small>Step 1</small></div>
+                    <div class="step-col"><small>Step 2</small></div>
+                    <div class="step-col"><small>Step 3</small></div>
+                </div>
+    </div>
+
+    <script>
+        var Form1 = document.getElementById("form1");
+        var Form2 = document.getElementById("form2");
+        var Form3 = document.getElementById("form3");
+
+        var next1 = document.getElementById("next1");
+        var next2 = document.getElementById("next2");
+        var back1 = document.getElementById("previous1");
+        var back2 = document.getElementById("previous2");
+        var progress = document.getElementById("progress");
+        // var submit = document.getElementById("submit");
+
+        next1.onclick = function () {
+            Form1.style.left = "-450px";
+            Form2.style.left = "40px";
+            progress.style.width = "260px";
+        }
+        back1.onclick = function () {
+            Form1.style.left = "40px";
+            Form2.style.left = "450px";
+            progress.style.width = "130px";
+        }
+        next2.onclick = function () {
+            Form2.style.left = "-450px";
+            Form3.style.left = "40px";
+            progress.style.width = "400px";
+        }
+        back2.onclick = function () {
+            Form2.style.left = "40px";
+            Form3.style.left = "450px";
+            progress.style.width = "260px";
+        }
+    </script>
+</body>
+</html>

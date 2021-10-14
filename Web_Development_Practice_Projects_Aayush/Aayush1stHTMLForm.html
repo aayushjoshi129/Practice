@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Forms</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <h1>This is My First Google Form</h1>
+    <form action="backend.php">
+
+        <div>
+            <label for="Name"> Name : </label> <input type="text" name="Name" id="Name">
+        </div>
+        <br>
+        <div>
+            <label for="RegNo"> Registration Number : </label> <input type="number" name="RegNo" id="RegNo">
+        </div>
+        <br>
+        <div>
+            <label for="Semester"> Semester : </label>
+            <select name="Semester" id="Semester">
+                <option value="1st Semester">1st Semester</option>
+                <option value="2nd Semester">2nd Semester</option>
+                <option value="3rd Semester">3rd Semester</option>
+                <option value="4th Semester">4th Semester</option>
+                <option value="5th Semester">5th Semester</option>
+                <option value="6th Semester">6th Semester</option>
+                <option value="7th Semester">7th Semester</option>
+                <option value="8th Semester">8th Semester</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="Email"> Email : </label><input type="email" name="Email" id="Email">
+        </div>
+        <br>
+        <div>
+            <label for="Contact"> Contact : </label><input type="number" name="Contact" id="Contact">
+        </div>
+        <br>
+        <!-- <div>
+        <input type="submit" value ="Submit Now">
+       </div> -->
+        <div>
+            Gender : Male <input type="radio" name="Gender"> Female <input type="radio" name="Gender"> Others <input
+                type="radio" name="Gender">
+        </div>
+        <br>
+        <label for="About">Write About Yourself : </label><br><textarea name="text" cols="60" rows="10"
+            id="About"></textarea>
+        <br>
+        <div>
+            <input type="checkbox" name="Terms"> I Agree To All Terms & Conditions
+        </div>
+        <br>
+        <div>
+            <button>Submit Now</button> <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+
+</html>

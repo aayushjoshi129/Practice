@@ -55,4 +55,4 @@ const Todo = () => {
   )
 }
 
-export default Todo 
+export default Todo
