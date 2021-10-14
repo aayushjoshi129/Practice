@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ReactFormUsingStates from './Thapa_Technical_Tasks/React_Forms/ReactFormUsingStates'
+import Todo from './Thapa_Technical_Tasks/ToDoList/ToDo'
 
-ReactDOM.render(<ReactFormUsingStates/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<Todo/>, document.getElementById("root")) // Used App Component
