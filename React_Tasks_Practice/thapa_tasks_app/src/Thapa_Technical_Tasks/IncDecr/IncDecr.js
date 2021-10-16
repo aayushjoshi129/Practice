@@ -1,6 +1,8 @@
 import React , {useState} from 'react'
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+// import AddIcon from '@mui/icons-material/Add';
+import AddIcon from '@material-ui/icons/Add';
+// import Button from '@mui/material/Button';
 
 const IncDecr = () => {
   const [val,setVal] = useState(0)
