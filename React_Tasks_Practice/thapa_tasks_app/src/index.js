@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Todo from './Thapa_Technical_Tasks/ToDoList/ToDo'
+import IncDecr from './Thapa_Technical_Tasks/IncDecr/IncDecr'
 
-ReactDOM.render(<Todo/>, document.getElementById("root")) // Used App Component
+ReactDOM.render(<IncDecr/>, document.getElementById("root")) // Used App Component
