@@ -1,4 +1,6 @@
 import React , {useState} from 'react'
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 const IncDecr = () => {
   const [val,setVal] = useState(0)
@@ -14,8 +16,8 @@ const IncDecr = () => {
   return(
     <>
     <h1>{val}</h1>
-    <button onClick={Increment}>Increment</button>
-    <button onClick={Decrement}>Decrement</button>
+    <button onClick={Increment}><AddIcon/></button>
+    <button onClick={Decrement}><RemoveIcon/></button>
     </>
   )
 }
