@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './todo.css'
-import TodoLists from './TodoLists'
+import ToDoList from './ToDoList'
 import Button from '@material-ui/core/Button'
 import AddIcon from '@material-ui/icons/Add'
 
@@ -49,7 +49,7 @@ const Todo = () => {
           </Button>
           <ol>
             {items.map((itemVal, index) => {
-              return <TodoLists text={itemVal} key={index} id={index} onSelect={deleteItems} />
+              return <ToDoList text={itemVal} key={index} id={index} onSelect={deleteItems} />
 
             })}
             {/* <li>{items}</li> */}
