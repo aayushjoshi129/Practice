@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import RemoveIcon from '@material-ui/icons/Remove';
 // import AddIcon from '@mui/icons-material/Add';
 import AddIcon from '@material-ui/icons/Add';
-// import Button from '@mui/material/Button';
+import Button from '@material-ui/core/Button';
 
 const IncDecr = () => {
   const [val,setVal] = useState(0)
@@ -13,13 +13,11 @@ const IncDecr = () => {
     val>0 ? setVal(val-1) : alert("Value Cannot be Less Than 0");
   }
 
-
-
   return(
     <>
     <h1>{val}</h1>
-    <button onClick={Increment}><AddIcon/></button>
-    <button onClick={Decrement}><RemoveIcon/></button>
+    <Button onClick={Increment}><AddIcon/></Button>
+    <Button onClick={Decrement}><RemoveIcon/></Button>
     </>
   )
 }
