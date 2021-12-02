@@ -1,0 +1,27 @@
+package new11;
+
+public class Abstraction {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+class Audi extends Car{
+	
+}
+
+class Jaguar extends Car{
+	
+}
+
+
+class Car {
+	int price;
+	String brand;
+	
+	void start() {
+		System.out.println("Car is Starting");
+	}
+}

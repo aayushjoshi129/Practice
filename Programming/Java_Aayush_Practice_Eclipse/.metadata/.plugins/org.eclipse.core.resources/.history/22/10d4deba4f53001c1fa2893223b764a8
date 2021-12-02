@@ -1,0 +1,75 @@
+package new11;
+
+public class MainClass{
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Person p1 = new Person();
+		p1.name = "Honey";
+		p1.age = 24;
+		
+		System.out.println(p1.name + " " + p1.age);
+		
+		p1.Walk();
+		p1.Eat();
+		
+		
+		Person p2 = new Person();
+		p2.name = "Diljit";
+		p2.age = 23;
+		p2.a = 21;
+		p2.b = 8;
+		
+		System.out.println(p2.name + " " + p2.age);
+		
+		p2.Walk();
+		p2.Eat();
+		p2.Walk(10);
+		
+		
+		System.out.println(p2.add());
+		System.out.println(p2.mult());
+		System.out.println(p2.subt());
+		System.out.println(p2.div());
+		System.out.println(p2.mod());
+	}
+}
+	class Person {
+		String name;
+		int age , a,b;
+		
+		void Walk() {
+			System.out.println(name+" can Walk");
+		}
+		
+		void Walk(int steps) {
+			System.out.println(name+" Walked "+steps+"steps");
+		}
+		
+		void Eat() {
+			System.out.println(name+" can Eat");
+		}
+		
+		int add() {
+			return a+b;
+		}
+		
+		int mult() {
+			return a*b;
+		}
+		
+		int div() {
+			return a/b;
+		}
+		
+		int subt() {
+			return a-b;
+		}
+		
+		int mod() {
+			return a%b;
+		}
+		
+	}
