@@ -1,0 +1,24 @@
+package new11;
+
+public class Abstraction {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+class Audi extends Car{
+	
+}
+
+class Jaguar extends Car{
+	
+}
+
+
+ abstract class Car {						// abstract is used when we know that it cannot create any object it's just a concept kind of thing so we use abstract keyword
+	int price;
+	
+	abstract void start();
+}

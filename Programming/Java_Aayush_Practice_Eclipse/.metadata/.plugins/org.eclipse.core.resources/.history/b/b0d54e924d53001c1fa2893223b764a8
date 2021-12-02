@@ -1,0 +1,20 @@
+package new11;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int mia = new Mainclass();
+		Person p1 = new Person();
+		p1.name = "Honey";
+		p1.age = 24;
+		System.out.println(p1.name + " " + p1.age);
+	}
+
+	class Person {
+		String name;
+		int age;
+		
+	}
+	
+}

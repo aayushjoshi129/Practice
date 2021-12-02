@@ -1,0 +1,31 @@
+package new11;
+
+public class MainClass{
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person p1 = new Person();
+		p1.name = "Honey";
+		p1.age = 24;
+		System.out.println(p1.name + " " + p1.age);
+		p1.Walk();
+		p1.Eat();
+		Person p2 = new Person();
+		p2.name = "Diljit";
+		p2.age = 23;
+		System.out.println(p2.name + " " + p2.age);
+		p2.Walk();
+		p2.Eat();
+	}
+}
+	class Person {
+		String name;
+		int age;
+		void Walk() {
+			System.out.println(name+" can Walk");
+		}
+		void Eat() {
+			System.out.println(name+" can Eat");
+		}
+				
+	}

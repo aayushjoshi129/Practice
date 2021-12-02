@@ -1,0 +1,13 @@
+package new11;
+
+public class Interfaces {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+interface Bike {					// Interfaces is a blueprint of class having static constants and abstract methods
+	void start();
+}

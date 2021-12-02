@@ -1,0 +1,17 @@
+package new11;
+import java.util.Scanner;
+public class week11 {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Week Number 1-7 : ");
+		int week = sc.nextInt();
+		case 1:
+			System.out.print("Monday");
+			break;
+		defaut :
+			System.out.print("Sunday");
+	}
+
+}
