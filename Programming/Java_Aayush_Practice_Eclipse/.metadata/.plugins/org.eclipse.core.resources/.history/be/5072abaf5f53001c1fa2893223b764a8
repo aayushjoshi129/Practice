@@ -1,0 +1,29 @@
+package encapsulation;
+
+public class EncapsulationIntro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Laptop l1 = new Laptop();
+		l1.price = 23;
+		l1.ram = 4;
+	}
+	
+
+	
+	 class Laptop {
+		int ram;
+		int price;
+		void laptop() {
+			System.out.println("Hello World");
+		}
+	}
+	
+//	public void doWork() {
+//		System.out.println("working working");
+//	}
+
+
+	
+}
