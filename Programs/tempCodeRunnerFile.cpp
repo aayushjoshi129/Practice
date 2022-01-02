@@ -1,3 +1,1 @@
-else{
-//   cout << a+1 << endl;
-// }
+cout<<n<<" is a Prime Number"<<endl;
