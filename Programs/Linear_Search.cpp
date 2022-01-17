@@ -1,3 +1,5 @@
+// # Time Complexity of Linear Search is O(n)
+
 #include<iostream>
 using namespace std;
   int searchArray(int arr[],int size,int num){
