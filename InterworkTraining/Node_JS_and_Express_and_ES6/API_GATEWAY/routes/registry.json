@@ -1,0 +1,16 @@
+{
+    "services":{
+        "testapi":{
+            "apiName":"testapi",
+            "host":"http://localhost",
+            "port":4001,
+            "url":"http://localhost:4001/"
+        },
+        "testapi2":{
+            "apiName":"testapi2",
+            "host":"http://localhost",
+            "port":4001,
+            "url":"http://localhost:4001/"
+        }
+    }
+}
