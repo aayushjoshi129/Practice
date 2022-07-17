@@ -1,0 +1,16 @@
+{
+  "name": "aayushfirstmongoconnection",
+  "version": "1.0.0",
+  "description": "first mongodb connection with express",
+  "main": "connection.js",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aayush",
+  "license": "ISC"
+}

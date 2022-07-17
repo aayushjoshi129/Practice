@@ -1,0 +1,16 @@
+{
+  "name": "aayush",
+  "version": "1.0.0",
+  "description": "first project of nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aayush",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {}
+}
