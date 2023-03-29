@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+var bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 require("../db/conn")
 
@@ -130,41 +132,47 @@ router.post('/register', async (req, res) => {
         return res.status(422).json({ error: `fill ${objs} properly` })
     }
 
-    try{
+    try {
         const userExist = await User.findOne({ email: email });
 
         if (userExist) {
             return res.status(422).json({ error: `Email Already Registered` });
         }
-
-        const obj = {
-            "name": req.body.name,
-            "email": req.body.email,
-            "phone": req.body.phone,
-            "work": req.body.work,
-            "password": req.body.password,
-            "cpassword": req.body.cpassword,
+        else if (password != cpassword) {
+            return res.status(422).json({ error: `Password and Confirm Password field is not matching` });
         }
-        const newUser = new User(obj);
+        else {
+            const obj = {
+                "name": req.body.name,
+                "email": req.body.email,
+                "phone": req.body.phone,
+                "work": req.body.work,
+                "password": req.body.password,
+                "cpassword": req.body.cpassword,
+            }
 
-        await newUser.save();
+            const newUser = new User(obj);
 
-        res.status(201).json({message:`Hey ${obj.name}, You've registered Successfully`});
+            await newUser.save();
+
+            res.status(201).json({ message: `Hey ${obj.name}, You've registered Successfully` });
+        }
+
     }
 
     catch (err) {
         console.log(err);
     }
 
-    });
+});
 
 
 
 // LOGIN USING ASYNC AWAIT
 
 router.post('/login', async (req, res) => {
-    const {  email, password} = req.body;
-    if (!email || !password ) {
+    const { email, password } = req.body;
+    if (!email || !password) {
         var jsonData = req.body;
         var objs = []
         for (var i in jsonData) {
@@ -177,19 +185,29 @@ router.post('/login', async (req, res) => {
         return res.status(422).json({ error: `fill ${objs} properly` })
     }
 
-    try{
+    try {
         const userExist = await User.findOne({ email: email });
 
-        if (!userExist) {
+        if (userExist) {
+            const isVerified = await bcrypt.compare(password, userExist.password);
+            const token = await userExist.generateAuthToken();
+            console.log(isVerified);
+            console.log(token);
+
+            res.cookie("jwtoken",token, {
+                expires: new Date(Date.now() + 25892000000),
+                httpOnly:true
+            });
+
+            if (!isVerified) {
+                res.status(401).json({ error: `Hey ${userExist.name}, You've Entered Wrong Password` });
+            }
+            else{
+                res.status(201).json({ message: `Hey ${userExist.name}, You've Logged In Successfully` });
+            }
+        }
+        else {
             return res.status(422).json({ error: `user not registered! Kindly register yourself` });
-        }
-
-
-        if(password!=userExist.password && password!=userExist.cpassword){
-        res.status(401).json({error:`Hey ${userExist.name}, You've Entered Wrong Password`});
-        }
-        else{
-            res.status(201).json({message:`Hey ${userExist.name}, You've Logged In Successfully`});
         }
         console.log(userExist);
     }
@@ -198,7 +216,7 @@ router.post('/login', async (req, res) => {
         console.log(err);
     }
 
-    });
+});
 
 
 module.exports = router;
