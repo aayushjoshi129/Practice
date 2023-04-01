@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-#nav-logo
-{
- height: 57px;
- width: 200px;
- position: absolute; 
- z-index: 1;
- margin-top: -30px; 
- margin-left: -15px; 
-}
 
 .bg{
   background-color:#b7cced;
@@ -24,16 +15,17 @@
   height: 100vh;
   background: linear-gradient(
     to right,
-    #cad7ed 0%,
-    #cad7ed 50%,
+    #e9e9f7 0%,
+    #d8d8f3 50%,
     #ffff 50%,
     #ffff 100%
   );
+
 }
 
 
 
-.center p {
+.center h2 {
   margin: 0;
   position: absolute;
   top: 40%;
