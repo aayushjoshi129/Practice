@@ -108,7 +108,7 @@ const Register = () => {
   // const [phone, setPhone] = useState('');
   // const [work, setWork] = useState('');
   // const [password, setPassword] = useState('');
-  // const [confirmPassword, setConfirmPassword] = useState('');
+  // const [cpassword, setcpassword] = useState('');
   // const [agreeTerms, setAgreeTerms] = useState(false);
 
 
@@ -118,7 +118,7 @@ const Register = () => {
     phone: "",
     work: "",
     password: "",
-    confirmPassword: "",
+    cpassword: "",
     // terms:false
   });
 
@@ -137,19 +137,21 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, phone, work, password, confirmPassword, terms } = user;
+    const { name, email, phone, work, password, cpassword } = user;
     const res = await fetch('/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(({
-        name, email, phone, work, password, confirmPassword, terms
+        name, email, phone, work, password, cpassword
       }))
-    });
+    }
+    );
 
     const data = await res.json();
-    if (data.status === 422 || !data) {
+    console.log(data);
+    if (res.status === 422 || !data) {
       window.alert('Registration Failed');
       console.log('Registration Failed');
     } else {
@@ -224,8 +226,8 @@ const Register = () => {
           id="confirm-password"
           className="input_register"
           placeholder="Confirm your password"
-          name='confirmPassword'
-          value={user.confirmPassword}
+          name='cpassword'
+          value={user.cpassword}
           onChange={handleInputs}
           required
         />

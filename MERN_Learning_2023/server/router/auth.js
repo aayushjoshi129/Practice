@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 var bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const authenticate = require('../middleware/authenticate')
 
 require("../db/conn")
 
@@ -119,6 +120,7 @@ router.get('/', (req, res) => {
 // REGISTER USING ASYNC AWAIT
 router.post('/register', async (req, res) => {
     const { name, email, phone, work, password, cpassword } = req.body;
+    console.log(req.body);
     if (!name || !email || !phone || !work || !password || !cpassword) {
         var jsonData = req.body;
         var objs = []
@@ -127,7 +129,7 @@ router.post('/register', async (req, res) => {
                 objs.push(i)
             }
         }
-        console.log(objs);
+        console.log(`${objs} not present`);
 
         return res.status(422).json({ error: `fill ${objs} properly` })
     }
@@ -194,15 +196,15 @@ router.post('/login', async (req, res) => {
             console.log(isVerified);
             console.log(token);
 
-            res.cookie("jwtoken",token, {
+            res.cookie("jwtoken", token, {
                 expires: new Date(Date.now() + 25892000000),
-                httpOnly:true
+                httpOnly: true
             });
 
             if (!isVerified) {
                 res.status(401).json({ error: `Hey ${userExist.name}, You've Entered Wrong Password` });
             }
-            else{
+            else {
                 res.status(201).json({ message: `Hey ${userExist.name}, You've Logged In Successfully` });
             }
         }
@@ -218,5 +220,10 @@ router.post('/login', async (req, res) => {
 
 });
 
+// About Us Page
+router.get('/about', authenticate, (req,res)=>{
+    console.log("Hello from About Us Page");
+    res.send(req.rootUser);
+ });
 
 module.exports = router;

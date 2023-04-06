@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../css/Login.css';
 
 // const Login = () => {
@@ -74,22 +74,42 @@ import '../css/Login.css';
 // }
 
 
-function Login() {
+const Login = () => {
+  const history = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
+    const res = await fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(({
+        email, password
+      }))
+    })
+    const data = res.json();
+    if (res.status === 401 || res.status === 422 || !data) {
+      window.alert('Login Failed');
+      console.log('Login Failed');
+    } else {
+      window.alert('Logged In Successfully');
+      console.log('Logged In Successfully');
+      history('/', { replace: true });
+    }
   };
 
   return (
     <div className="container_login">
       <h1 className="title_login">Log In</h1>
-      <form onSubmit={handleSubmit} className="form_login">
+      <form onSubmit={handleSubmit} method='POST' className="form_login">
         <label htmlFor="email" className="label_login">Email</label>
         <input
           type="email"
+          name="email"
           id="email"
           className="input_login"
           placeholder="Enter your email"
@@ -100,6 +120,7 @@ function Login() {
         <label htmlFor="password" className="label_login">Password</label>
         <input
           type="password"
+          name="password"
           id="password"
           className="input_login"
           placeholder="Enter your password"
@@ -107,7 +128,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="button_login">Log In</button>
+        <button type="submit" className="button_login" onClick={handleSubmit}>Log In</button>
       </form>
       <p className="text">
         Don't have an account?{' '}

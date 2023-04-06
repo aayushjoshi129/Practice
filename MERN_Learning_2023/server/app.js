@@ -17,10 +17,10 @@ const PORT = process.env.PORT;
 
 // Middleware  -  interacts as intermediate  
 
-const middleware = (req,res,next)=> {
-   console.log('Hello Middleware');
-   next()
-}
+// const middleware = (req,res,next)=> {
+//    console.log('Hello Middleware');
+//    next()
+// }
 
 // middleware();
 
@@ -28,9 +28,9 @@ app.get('/', (req,res)=>{
    res.send(`Hello World from MERN_Learning_2023 Course`);
 });
 
-app.get('/about', middleware, (req,res)=>{
-   res.send("Hello World from About");
-});
+// app.get('/about', middleware, (req,res)=>{
+//    res.send("Hello World from About");
+// });
 
 app.get('/contact', (req,res)=>{
    res.send("Hello World from contact");
