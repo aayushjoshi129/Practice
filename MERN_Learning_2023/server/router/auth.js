@@ -193,13 +193,15 @@ router.post('/login', async (req, res) => {
         if (userExist) {
             const isVerified = await bcrypt.compare(password, userExist.password);
             const token = await userExist.generateAuthToken();
-            console.log(isVerified);
-            console.log(token);
+            // console.log(isVerified);
+            // console.log(token);
 
             res.cookie("jwtoken", token, {
                 expires: new Date(Date.now() + 25892000000),
-                httpOnly: true
+                httpOnly: true,
+                secure: false
             });
+
 
             if (!isVerified) {
                 res.status(401).json({ error: `Hey ${userExist.name}, You've Entered Wrong Password` });
@@ -211,7 +213,7 @@ router.post('/login', async (req, res) => {
         else {
             return res.status(422).json({ error: `user not registered! Kindly register yourself` });
         }
-        console.log(userExist);
+        // console.log(userExist);
     }
 
     catch (err) {

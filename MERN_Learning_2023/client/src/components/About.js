@@ -8,7 +8,7 @@ const About = () => {
 
   const callAboutPage = async () =>{
     try {
-      const res = fetch('/about',{
+      const res = await fetch('/about',{
         method:'GET',
         headers:{
           Accept:"application/json",
@@ -21,18 +21,23 @@ const About = () => {
       console.log(data);
       setUserData(data);
       
-      if(!res.status===200){
+      if(!res.status===200 || !res.status===304){
       const error = new Error(res.error);
       throw error;
     }
+    return userData;
+
     } catch (err) {
       console.log(err);
       history('/login', { replace: true });
     }
   }
 
+  console.log(userData);
+
+
   useEffect(() => {
-    callAboutPage();
+     callAboutPage();
   }, []);
   
 

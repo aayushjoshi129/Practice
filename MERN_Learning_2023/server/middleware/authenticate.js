@@ -1,13 +1,21 @@
 const jwt = require('jsonwebtoken')
+var express = require('express');
+const router = express.Router();
+// var app = express();
+var cookies = require("cookie-parser");
+
+// app.use(cookies());
+router.use(cookies());
 const User = require("../model/userSchema")
 
 const Authenticate = async (req,res,next) => {
     try {
-        console.log(req.cookies);
-        const token = req.cookies.jwtoken;
+        console.log(req.headers.cookie.substring(8,));
+        const token = req.headers.cookie.substring(8,);
+        // const token = req.cookies.jwtoken;
         const verifyToken = jwt.verify(token,process.env.SECRET_KEY);
 
-        const rootUser = await  User.findOne({_id:verifyToken._id,"tokens.token":token});
+        const rootUser = await User.findOne({_id:verifyToken._id,"tokens.token":token});
 
         if(!rootUser){
             throw new Error('User Not Found');
