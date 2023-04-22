@@ -1,9 +1,10 @@
-import React from 'react'
+import { React, useContext } from 'react'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
-import  logo_1  from './images/logo_homepage_1.png';
+import logo_1 from './images/logo_homepage_1.png';
 // import  logo  from './images/logo_homepage.png';
 import '../css/Navbar.css';
+import { userContext } from '../App'
 
 
 // const Navbar = () => {
@@ -46,15 +47,29 @@ import '../css/Navbar.css';
 
 
 const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <NavLink to="/">
-          <img src={logo_1} alt="Logo" id='nav-logo' />
-        </NavLink>
-      </div>
-      <div className="navbar-right">
-        <ul>
+  const { state, dispatch } = useContext(userContext);
+
+  const RenderMenu = () => {
+    if (state) {
+      return (
+        <>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to="/logout">Logout</NavLink>
+          </li>
+        </>
+      )
+    } else {
+      return (
+        <>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
@@ -70,9 +85,48 @@ const Navbar = () => {
           <li>
             <NavLink to="/register">Register</NavLink>
           </li>
+          <li>
+          </li>
+        </>
+      )
+    }
+  }
+
+
+  return (
+    <>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <NavLink to="/">
+          <img src={logo_1} alt="Logo" id='nav-logo' />
+        </NavLink>
+      </div>
+      <div className="navbar-right">
+        <ul>
+          {/* <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to="/login">Login</NavLink>
+          </li>
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
+          <li>
+            <NavLink to="/logout">Logout</NavLink>
+          </li> */}
+
+          <RenderMenu />
         </ul>
       </div>
     </nav>
+    </>
   );
 };
 

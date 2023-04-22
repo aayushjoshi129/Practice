@@ -34,7 +34,16 @@
   color:rgb(100, 100, 239);
 }
 
-.center h1 {
+.forName {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:rgb(100, 100, 239);
+}
+
+.h1back {
   margin: 0;
   position: absolute;
   top: 50%;

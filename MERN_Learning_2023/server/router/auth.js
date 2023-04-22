@@ -223,9 +223,66 @@ router.post('/login', async (req, res) => {
 });
 
 // About Us Page
-router.get('/about', authenticate, (req,res)=>{
+router.get('/about', authenticate, (req, res) => {
     console.log("Hello from About Us Page");
     res.send(req.rootUser);
- });
+});
+
+// GetData Page
+router.get('/getData', authenticate, (req, res) => {
+    console.log("Hello from getData Page");
+    res.send(req.rootUser);
+});
+
+
+// ContactUs Page
+router.post('/contact', authenticate, async (req, res) => {
+    const { name, email, phone, subject, message } = req.body;
+    console.log(req.body);
+    if (!name || !email || !phone || !subject || !message) {
+        var jsonData = req.body;
+        var objs = []
+        for (var i in jsonData) {
+            if (jsonData[i] == '' || jsonData[i] == null) {
+                objs.push(i)
+            }
+        }
+        console.log(`${objs} not present`);
+
+        return res.status(422).json({ error: `fill ${objs} properly` })
+    }
+    try {
+        const userContact = await User.findOne({ _id: req.userID });
+
+        const obj = {
+            "name": req.body.name,
+            "email": req.body.email,
+            "phone": req.body.phone,
+            "subject": req.body.subject,
+            "message": req.body.message,
+        }
+
+        if (userContact) {
+            // return res.status(422).json({ error: `Email Already Registered` });
+            const userMessage = await userContact.addMessages(obj);
+            await userContact.save();
+            res.status(201).json({ message: `Hey ${name}, You've shared your message` });
+        }
+        else {
+            res.status(201).json({ message: `Hey,${userContact} User does not exists` });
+        }
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+
+
+// Logout Page
+router.get('/logout', authenticate, (req, res) => {
+    console.log("Hello from Logout Us Page");
+    res.clearCookie('jwtoken',path='/')
+    res.status.apply(200).send("You've Logged Out Successfully");
+});
 
 module.exports = router;

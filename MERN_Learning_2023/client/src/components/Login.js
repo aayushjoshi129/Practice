@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../css/Login.css';
-
+import {userContext} from '../App'
 // const Login = () => {
 //   return (
 //     <>
@@ -75,6 +75,9 @@ import '../css/Login.css';
 
 
 const Login = () => {
+
+  const {state,dispatch} = useContext(userContext)
+
   const history = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -96,6 +99,7 @@ const Login = () => {
       window.alert('Login Failed');
       console.log('Login Failed');
     } else {
+      dispatch({type:"USER",payload:true});
       window.alert('Logged In Successfully');
       console.log('Logged In Successfully');
       history('/', { replace: true });

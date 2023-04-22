@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Contact.css';
 
 // const Contact = () => {
@@ -88,43 +88,89 @@ import '../css/Contact.css';
 
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+
+  const [users, setUsers] = useState([])
+
+  const fetchUserData = async () => {
+    const res = await fetch('/getData', {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    const data = await res.json();
+    setUsers({ ...users, name: data.name, email: data.email, phone: data.phone });
+
+  }
+
+  useEffect(() => {
+    fetchUserData()
+  }, [])
+
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   subject: '',
+  //   message: '',
+  // });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setUsers({ ...users, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  //sending data to DB
+  const handleSend = async (e) => {
     e.preventDefault();
-    // Add code to submit form data here
+    const { name, phone, email, subject, message } = users;
+    const res = await fetch('/contact', {
+      method: 'POST',
+      headers:
+      {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(({
+        name, email, phone, message, subject
+      }))
+    }
+    )
+    const data = await res.json();
+    if (!data) {
+      console.log("Not Send");
+    } else {
+      alert('Send Successfully');
+      setUsers({ ...users, message: "" })
+    }
   };
+
+
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" method='POST'>
       <h2>Contact Us</h2>
       <div className="form-group_contact">
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+        <input type="text" id="name" name="name" value={users.name} onChange={handleChange} required />
       </div>
       <div className="form-group_contact">
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+        <input type="email" id="email" name="email" value={users.email} onChange={handleChange} required />
+      </div>
+      <div className="form-group_contact">
+        <label htmlFor="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" value={users.phone} onChange={handleChange} required />
       </div>
       <div className="form-group_contact">
         <label htmlFor="subject">Subject</label>
-        <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
+        <input type="text" id="subject" name="subject" value={users.subject} onChange={handleChange} required />
       </div>
       <div className="form-group_contact">
         <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
+        <input type="text" id="message" name="message" value={users.message} onChange={handleChange} required />
       </div>
-      <button type="submit">Send</button>
+      <button type="submit" className="button_register" onClick={handleSend}>Send</button>
     </form>
   );
 };
