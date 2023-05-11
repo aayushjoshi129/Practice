@@ -1,0 +1,83 @@
+.container_register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background-color: #f5f5f5; */
+  }
+  
+  .title_register {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form_register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Changed to align left */
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label_register {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left; /* Added to align left */
+  }
+  
+  .input_register {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+  }
+  
+  .checkbox_register {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox_register label {
+    font-size: 0.8rem;
+  }
+  
+  .checkbox_register input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  .button_register {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .text_register {
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .link_register {
+    color: #2c3e50;
+    text-decoration: none;
+  }
+  
+  .link_register:hover {
+    text-decoration: underline;
+  }
+  

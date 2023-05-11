@@ -1,0 +1,17 @@
+EPISODE 1 - Let's learn Full Stack Web Development using MERN Stack || Episode-1
+
+1) WEB - It is a system where documents and resources are present in interconnected format and can be accessed using internet.
+
+2) WEBSITES - multiple web pages where only static content is present. ex- Wikipedia, blogs websites etc.
+
+3) WEB-APPS - multiple web pages where dynamic content is present and usually where most of the user interaction is present. ex- LinkedIn, Instagram, Facebook, WeatherApp etc.
+
+4) WEB-APPLICATION LAYERS - 
+
+4.1) FrontEnd (UI/UX) - HTML, CSS, JAVASCRIPT
+4.2) BackEnd (Brain of Web-App) -  JAVASCRIPT, PYTHON, PHP, JAVA, RUBY, NODEJS, EXPRESSJS etc.
+4.3) Database Layer (manipulate data) - NOSQL, SQL, MYSQL, POSTGRESQL, MONGODB etc.
+
+5) FULL STACK DEVELOPMENT - It is a combination of all 3 layers i.e, FrontEnd + BackEnd + Database.
+
+6) TECH'S GOING TO BE USED IN THIS COURSE - M(MONGODB) E(EXPRESSJS) R(REACTJS) N(NODEJS)
