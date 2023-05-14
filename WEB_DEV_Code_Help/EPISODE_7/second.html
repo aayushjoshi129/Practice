@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TARGET TABLE</h1>
+    <!-- table>(thead>th*3)+tbody>(tr>td*4)*3 -->
+    <table border="1">
+        <thead>
+            <th>Employee Name</th>
+            <th>Employee Age</th>
+            <th>Employee Gender</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aayush</td>
+                <td>22</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Aditya</td>
+                <td>24</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Anjali</td>
+                <td>21</td>
+                <td>Female</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <h1>TARGET TABLE 2 (ROWSPAN)</h1>
+    <!-- table>(thead>th*3)+tbody>(tr>td*4)*3 -->
+    <table border="1">
+        <thead>
+            <th>Employee Name</th>
+            <th>Employee Age</th>
+            <th>Employee Gender</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Aayush</td>
+                <td>22</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <!-- <td>Aditya</td> -->
+                <td>24</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Anjali</td>
+                <td>21</td>
+                <td>Female</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <h1>TARGET TABLE 3 (ROWSPAN + COLSPAN)</h1>
+    <!-- table>(thead>th*3)+tbody>(tr>td*4)*3 -->
+    <table border="1">
+        <thead>
+            <th>Employee Name</th>
+            <th>Employee Age</th>
+            <th>Employee Gender</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Aayush</td>
+                <td>22</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <!-- <td>Aditya</td> -->
+                <td>24</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td colspan="3">Anjali</td>
+                <!-- <td>21</td> -->
+                <!-- <td>Female</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>NORMAL TABLE</h1>
+    <!-- NORMAL TABLE -->
+    <table border="1">
+      <thead>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Aakash</td>
+          <td>M</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rohit</td>
+          <td>M</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Shruti</td>
+          <td>F</td>
+          <td>17</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>ROWSPAN TABLE</h1>
+    <!-- ROWSPAN TABLE -->
+    <table border="1">
+      <thead>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Aakash</td>
+          <td>M</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rohit</td>
+          <td>M</td>
+          <td rowspan="2">21</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Shruti</td>
+          <td>F</td>
+          <!-- <td>17</td> -->
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>COLSPAN TABLE</h1>
+    <!-- COLSPAN TABLE -->
+    <table border="1">
+      <thead>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td colspan="3">Aakash</td>
+          <!-- <td>M</td>
+            <td>21</td> -->
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rohit</td>
+          <td>M</td>
+          <td rowspan="2">21</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Shruti</td>
+          <td>F</td>
+          <!-- <td>17</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

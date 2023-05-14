@@ -1,0 +1,11 @@
+Efficient Coding Techniques with MERN Stack | Emmet, Div Tag, Lists and Anchor Tag Variations | Ep-6
+
+1) Div Tag - It is a generic tag used for wrapping/Container
+
+2) Block Elements - Those elements which come on next line (It takes all space from left to right)
+
+3) Inline Elements - It does not take all space and not come in next line.
+
+4) can we convert any block element into inline element or vice versa - You can set a block-level element to display like an inline element by setting the display property to inline. You can also cause inline elements to behave like block-level elements using the display property.
+
+5) 
