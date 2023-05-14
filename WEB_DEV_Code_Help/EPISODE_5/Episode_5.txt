@@ -1,0 +1,8 @@
+Mastering HTML Tags for Web Development || Episode - 5
+
+1) TAGS - It is a markup entity which can provide structure, meaning or formatting to your website.
+
+2) Different types of Tags
+2.1) Semantics - <h1> to <h6> , <p> ,  <a> , <ul> , <ol> , <table> , <tr> , <td> , <img> , <form> , <input>
+2.2) Structure - html, body, head, footer, header, main, aside, article, section, nav.
+2.3) Formatting - b, i, u, s, strong, em, sup, sub, pre, code.

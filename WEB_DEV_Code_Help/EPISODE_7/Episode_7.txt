@@ -1,0 +1,11 @@
+HTML Tables: Rows, Columns, and Advanced Attributes | MERN Stack Web Development || Episode - 7
+
+1) Table - It is basically an arrangement of the data in form of rows and tables.
+
+Table   -   for wrapping all in a table
+thead  -   for heading wrapper
+tbody   -   for containing data
+tfoot   -   for summarization
+tr  -   table rows
+th  -   for heading
+td  - table data

@@ -1,0 +1,28 @@
+Code your first HTML Program || Complete HTML Series || Episode - 4
+
+1) HTML (Hypertext Markup Language) - HTML is the standard markup language for Web pages.It describes the structure of a Web page. It shows what part in the website. It's main function is to label the elements.
+
+2) CSS (Cascading Style Sheets) - It handles the apprearance related stuff.
+
+3) JS (Javascript) - It defines the brain of website. All logics functionality will be written in JS.
+
+4) First Project in index.html file
+
+5) <!DOCTYPE html> - Tells the document type is in HTML5
+
+6) Tags - It Defines a text that has been inserted into a document. ex- h1, p, img, a, etc.
+
+7) Element - It is the complete entity or pair of elements with starting and closing. ex - <h1> content </h1>
+
+8) head tag - All metadata/SEO/Title related data will be inserted in head tag.
+
+9) Body Tag - Data that need to be inserted to interact with the data or the data that needs to be display.
+
+10) EMMET - Emmet is a set of plug-ins for text editors that allow for high-speed coding and editing in HTML, XML, XSLT, and other structured code formats via content assist.
+
+11) RESOURCES - MDN and W3Schools
+
+MDN - https://developer.mozilla.org/en-US/docs/Learn
+
+W3Schools - https://www.w3schools.com/html/
+
