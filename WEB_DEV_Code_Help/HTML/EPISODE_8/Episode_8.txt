@@ -1,0 +1,26 @@
+Forms in HTML || Complete Web Dev Series 2023 || Episode - 8
+
+1) Forms - It is a type of structure that is used to collect the user input data.
+
+Some basic tags in Forms:
+
+1.1) <form> tag - To create HTML Forms for user input.
+
+1.2) <input> tag - It can be displayed in many forms. ex- text, password, tel, radio button, checkbox, datepicker etc.
+
+1.3) <Label> tag - It is used to do the labeling of input tag like loginID, password, age, etc.
+It can be used as screen reader.
+NOTE: In every label tag there is a for attribute like for='' where we need to insert for which attribute we are giving this label. and for='' should always be equal to id of input tag.
+label(for) ===input(id).
+
+1.4) Select Tag - we can create dropdown using Select tag.
+
+1.5) Option tag - we can create options for Select tag using option tag.
+
+1.6) <button> tag - used to create a button.
+
+1.7) <textarea> tag - used to take multi-line input from the user.
+
+1.8) FieldSet - used to group too many elements.
+
+1.9) Legend - used to give the caption in FieldSet.

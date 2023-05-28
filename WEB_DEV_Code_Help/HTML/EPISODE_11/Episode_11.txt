@@ -1,0 +1,8 @@
+Project 2: HTML Media Project || Media tags, Modern HTML and iframes || Episode - 11
+
+MODERN HTML
+1) Media - img, video, audio files how to render using img tag, video tag and audio tags.
+
+2) HTML Loading lazy - The loading attribute specifies whether a browser should load an image immediately or to defer loading of off-screen images until for example the user scrolls near them. Tip: Add loading="lazy" only to images which are positioned below the fold.
+
+3) IFRAME Tag - The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.

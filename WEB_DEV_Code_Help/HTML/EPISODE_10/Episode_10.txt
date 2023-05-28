@@ -1,0 +1,5 @@
+Project 1: HTML Resume Project || Complete Web Development Series 2023 || Episode - 10
+
+1) details tag - used to make content toggle in data to expand and supress.
+
+1) summary tag - used to make question inside details tag.
