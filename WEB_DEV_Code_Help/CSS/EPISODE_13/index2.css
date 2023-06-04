@@ -1,0 +1,21 @@
+/* ELEMENT SELECTOR */
+p {
+  color: rgb(107, 18, 18);
+}
+
+/* ID SELECTOR */
+#heading {
+  text-align: center;
+}
+
+/* CLASS SELECTOR */
+.a {
+  background-color: blue;
+  color: white;
+}
+
+/* GROUP SELECTOR */
+span,
+div {
+  font-size: 30px;
+}

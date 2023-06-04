@@ -1,0 +1,7 @@
+CSS Typography: Fonts, Colors && Developer tools || Episode - 14
+
+1) Fonts - The font CSS shorthand property sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+
+2) Colors - can be implemented using rgb, name, hex, hsl
+
+The CSS colors module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
