@@ -1,0 +1,1 @@
+Question) Given a binary matrix your task is to find all unique rows of the given matrix in the order of their appearance in the matrix.
