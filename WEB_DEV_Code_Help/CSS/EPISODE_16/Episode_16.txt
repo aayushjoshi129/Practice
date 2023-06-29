@@ -1,0 +1,17 @@
+CSS Display Property in Depth: Understanding Inline, Block, and Inline-Block || Episode - 16
+
+1) Display Property - How to display different elements/tags.
+1.1) Block Elements - which takes block size. ex-div,p,h1,footer,form, ol, li, ul, video, table, section, header etc. 
+1.1.a) It always come in next line
+1.1.b) It always takes width from extreme left to extreme right
+1.1.c) It respects the custom height and width.
+1.1.d) It respects the custom margin and padding.
+
+1.2) Box-Sizing - It retains the size of box.
+
+1.3) Inline Elements - which takes just content size. ex-a,b,big,br,button,code,em,i,img,input,label,map,script,select,span,strong,sup,sub,textarea etc. 
+1.1.a) It always try to come in same line
+1.1.b) It always takes width that is equal to the content width.
+1.1.c) It dis-respects the custom height and width.
+1.1.d) It respects the custom padding and dis-respects the custom margin.
+
