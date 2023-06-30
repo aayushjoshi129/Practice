@@ -1,0 +1,7 @@
+Mastering CSS Position Property: Static, Relative, Absolute, Fixed, and Sticky || Episode - 17
+
+1) When working with position relative property, we are positioning elemnt wrt current window. It takes the gap of the image
+
+2) When working with position Absolute property, we are positioning elemnt wrt closest parent. It doesn't takes the gap of the image. It is good practice to set parent elemnt as position absolute.
+
+3) Position Sticky works with its parent whereas Position Fixed worked without any parent.
