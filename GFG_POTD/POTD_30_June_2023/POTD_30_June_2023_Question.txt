@@ -1,0 +1,1 @@
+Question) Given a number in its binary form find if the given binary number is a multiple of 3. It is recommended to finish the task using one traversal of input binary number.
