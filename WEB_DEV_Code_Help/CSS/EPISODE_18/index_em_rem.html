@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Size Unit</title>
+    <style>
+      .container {
+        font-size: 10px;
+        margin: 10px;
+      }
+      .box {
+        font-size: 10em; /* Relative to its parent, its size will become (10*(size of parent))*/
+        margin: 2em; /* Relative to its parent, its size will become (2*(size of parent))*/
+      }
+      .firstPara {
+        border: 2px solid green;
+        font-size: 2rem; /* Relative to HTML, its size will become (2*(size of HTML Default(16px)))*/
+      }
+    </style>
+  </head>
+  <body>
+    <p class="firstPara">Hello</p>
+    <div class="container">
+      <div class="box">Welcome to My Hood</div>
+    </div>
+  </body>
+</html>

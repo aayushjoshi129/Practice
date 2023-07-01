@@ -1,0 +1,18 @@
+CSS Size Units in Depth: Unlocking the Power of px, %, vw, vh, em, and rem
+
+1) Size Unit - CSS has several different units for expressing a length.Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.
+Length is a number followed by a length unit, such as 10px, 2em, etc.
+
+2.1) Absolute Unit - It is basically fixed length unit. ex- pixel, cm, m, km etc.
+
+2.2) Relative Unit - It is relative to parent or something. ex - vw, vh, %, em, rem etc.
+
+3) Physical Pixel VS Logical Pixel - Logical pixels are roughly the same visual size across devices. Physical pixels are the size of the actual hardware pixels on the device. The number of physical pixels per logical pixel is described by the devicePixelRatio.
+
+4) Pixels per inch (PPI) refers to the number of pixels contained within each inch of a digital image.
+(DPI) stands for Dots per Inch, referring to the number of ink droplets a printer will produce per inch while printing an image. 
+The more dots of ink per inch the picture has, the more detail you will see when printed.
+
+5) Pixel = 1/96 Inch
+
+NOTE: Always try to use Relative Units in Responsive Websites
