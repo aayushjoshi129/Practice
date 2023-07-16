@@ -1,0 +1,5 @@
+Mastering CSS Float, Clear, and Overflow in 20 Minutes || Episode - 19
+
+1) Float - It is used to set the positioning of the attribute.
+1.1) Float - right, left - to Float image to right side or left side.
+1.2) Clear - right, left  - to clear the floating image maybe right or left.
