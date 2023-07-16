@@ -1,0 +1,5 @@
+Find triplets with zero sum
+
+Given an array arr[] of n integers. Check whether it contains a triplet that sums up to zero. 
+
+Note: Return 1, if there is at least one triplet following the condition else return 0.
