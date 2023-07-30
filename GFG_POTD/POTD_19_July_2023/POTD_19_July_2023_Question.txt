@@ -1,0 +1,5 @@
+Longest Palindromic Subsequence
+
+Question) Given a String, find the longest palindromic subsequence.
+
+NOTE: Subsequence of a given sequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the order of the remaining elements

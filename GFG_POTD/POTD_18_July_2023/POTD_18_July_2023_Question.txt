@@ -1,0 +1,5 @@
+Longest Repeating Subsequence
+
+Question) Given string str, find the length of the longest repeating subsequence such that it can be found twice in the given string.
+
+The two identified subsequences A and B can use the same ith character from string str if and only if that ith character has different indices in A and B. For example, A = "xax" and B = "xax" then the index of first "x" must be different in the original string for A and B.
